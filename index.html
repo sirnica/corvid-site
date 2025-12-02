@@ -3,156 +3,734 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corvid Token</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Corvid - Learn to use AI without losing your cognitive edge. Master responsible cognitive offloading and mental wellness.">
+    <meta name="keywords" content="AI, cognitive offloading, artificial intelligence, memory, learning, critical thinking, responsible AI use">
+    <meta name="author" content="Mahir Pepic">
+    <title>Corvid | Learn Responsible AI Use</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .crow-icon {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Content boxes */
+        .content-box {
+            background: white;
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .warning-box {
+            border-left-color: #f59e0b;
+            background: #fffbeb;
+        }
+
+        .success-box {
+            border-left-color: var(--secondary);
+            background: #f0fdf4;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Flowchart */
+        .flowchart {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            margin: 2rem 0;
+        }
+
+        .flow-step {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .flow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Page content area */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* White paper section */
+        .whitepaper-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .pdf-placeholder {
+            background: var(--light);
+            border: 2px dashed var(--border);
+            padding: 4rem;
+            text-align: center;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0; padding: 0;
-            background: #0c0c0c; color: white;
+
+        /* Placeholder for future content */
+        .coming-soon {
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
         }
-        header {
-            display: flex; justify-content: space-between;
-            align-items: center; padding: 1rem 2rem;
-            background: #111;
-        }
-        nav a {
-            margin: 0 1rem; color: white; text-decoration: none;
-            font-weight: bold; cursor: pointer;
-        }
-        .hero {
-            text-align: center; padding: 6rem 1rem;
-            background: url('banner.png') center/cover no-repeat;
-        }
-        .section { padding: 4rem 2rem; max-width: 900px; margin: auto; }
-        .section-header { text-align: center; margin-bottom: 2rem; }
-        .content-box { background: #1a1a1a; padding: 2rem; border-radius: 8px; }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border: 1px solid white;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            margin-top: 1rem;
-        }
-        .btn:hover {
-            background: white; color: black;
+
+        .coming-soon h3 {
+            color: var(--accent);
         }
     </style>
 </head>
-
 <body>
-
-<!-- ====================== -->
-<!-- HEADER NAVIGATION -->
-<!-- ====================== -->
-<header>
-    <h2>CORVID</h2>
+    <!-- Navigation -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#token">Tokenomics</a>
-        <a href="#whitepaper">White Paper</a> <!-- UPDATED -->
-        <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <svg class="crow-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 11.5c0-1.9-1.3-3.5-3-3.9V5c0-1.1-.9-2-2-2s-2 .9-2 2v2c0 .6.2 1.1.6 1.5-.5.3-.9.7-1.2 1.2C12.9 8.7 12 8 11 8c-1.4 0-2.5.9-2.9 2.1C7.6 9.4 6.8 9 6 9c-1.7 0-3 1.3-3 3 0 1.2.7 2.3 1.8 2.8-.1.4-.1.7-.1 1.1 0 2.8 2.2 5 5 5 1.9 0 3.5-1.1 4.3-2.6.4.1.8.2 1.2.2 2.2 0 4-1.8 4-4 0-.3 0-.7-.1-1C20.3 13 21 12.3 21 11.5z"/>
+                </svg>
+                Corvid
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('learn')">Learn</a></li>
+                <li><a href="#" onclick="showPage('whitepaper')">White Paper</a></li>
+                <li><a href="#" onclick="showPage('techniques')">Techniques</a></li>
+                <li><a href="#" onclick="showPage('resources')">Resources</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+            </ul>
+        </div>
     </nav>
-</header>
 
-<!-- ====================== -->
-<!-- HERO SECTION -->
-<!-- ====================== -->
-<section id="home" class="hero">
-    <h1>Welcome to CORVID</h1>
-    <p>The Intelligent Token Inspired by Nature</p>
-</section>
+    <!-- HOME PAGE -->
+    <div id="home" class="page-content active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Learn to Use AI Without Losing Your Edge</h1>
+            <p class="hero-subtitle">Master responsible cognitive offloading + mental wellness foundations</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn" onclick="showPage('learn')">Begin with the Basics</a>
+                <a href="#" class="btn btn-secondary" onclick="showPage('whitepaper')">Read the White Paper</a>
+            </div>
+        </div>
 
-<!-- ====================== -->
-<!-- ABOUT SECTION -->
-<!-- ====================== -->
-<section id="about" class="section">
-    <div class="section-header">
-        <h1>About CORVID</h1>
-    </div>
-    <div class="content-box">
-        <p>
-            CORVID is a decentralized token inspired by the intelligence,
-            social organization, and adaptability of crows.
-        </p>
-    </div>
-</section>
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Why Corvid -->
+            <section>
+                <h2>Why "Corvid"?</h2>
+                <div class="content-box" style="background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); border-left: 4px solid var(--accent);">
+                    <p>Crows are unusually reflective animals. Ethologists have documented them testing objects repeatedly, trying tools from multiple angles, and revisiting earlier steps to confirm what they learned. Their intelligence isn't just raw problem-solving — it's self-monitoring. A crow will run an experiment, pause, evaluate, and try again with intention.</p>
+                    
+                    <p>That deliberate loop maps well to responsible use of AI.</p>
+                    
+                    <p>AI accelerates thinking, but without self-monitoring, it also makes it easy to outsource too much. You can start letting the system decide structure, reasoning, or direction before you even notice it happening. The crow's behavior offers a simple principle: <strong>use the tool, but stay aware of your own mind in the process.</strong></p>
+                    
+                    <p>And history supports the idea that humans can integrate powerful tools without losing themselves. The internet reorganized memory habits, but it didn't eliminate our capacity to remember. Calculators changed everyday arithmetic, but numerical reasoning still exists — because we learned to use the tools, not surrender to them.</p>
+                    
+                    <p>AI can follow that same trajectory if people approach it with the crow's mindset: curious, intentional, and always willing to double-check their own thinking.</p>
+                    
+                    <p><strong>That's why this initiative borrows its name from the crow</strong> — not just for intelligence, but for the habit of checking oneself while using a powerful aid.</p>
+                </div>
+            </section>
 
-<!-- ====================== -->
-<!-- TOKEN SECTION -->
-<!-- ====================== -->
-<section id="token" class="section">
-    <div class="section-header">
-        <h1>Tokenomics</h1>
-    </div>
-    <div class="content-box">
-        <p>
-            Supply, distribution, utilities, and governance mechanisms of CORVID.
-        </p>
-    </div>
-</section>
+            <!-- Three Pillars -->
+            <section>
+                <h2>What This Site Teaches</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🧠</div>
+                        <h3>Responsible Offloading</h3>
+                        <p>Learn when and how to delegate cognitive tasks to AI tools without compromising your thinking abilities.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💡</div>
+                        <h3>Cognitive Integrity</h3>
+                        <p>Protect your memory, reasoning skills, and decision-making capacity while leveraging AI assistance.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌱</div>
+                        <h3>Mental Wellness Foundations</h3>
+                        <p>Build sustainable practices that counteract over-reliance and maintain cognitive health.</p>
+                    </div>
+                </div>
+            </section>
 
-<!-- ====================== -->
-<!-- WHITE PAPER SECTION -->
-<!-- ====================== -->
-<section id="whitepaper" class="section">
-    <div class="section-header">
-        <h1>Corvid White Paper</h1>
-        <p>Research, Vision, & Technical Documentation</p>
-    </div>
+            <!-- Why This Matters -->
+            <section>
+                <h2>Why This Matters</h2>
+                <div class="content-box">
+                    <p>AI assistants are transforming how we think, work, and learn. But without proper boundaries, cognitive offloading can weaken the very mental capabilities that make us effective and creative.</p>
+                    
+                    <p><strong>The Risk:</strong> Over-reliance on AI for tasks we should perform ourselves can lead to:</p>
+                    <ul>
+                        <li><strong>Memory degradation</strong> – When we stop encoding information ourselves</li>
+                        <li><strong>Reduced reasoning ability</strong> – When AI does our thinking for us</li>
+                        <li><strong>Weakened self-regulation</strong> – When we lose the habit of effortful thought</li>
+                        <li><strong>Decision-making dependency</strong> – When we can't trust our own judgment</li>
+                    </ul>
 
-    <div class="content-box">
+                    <p><strong>The Opportunity:</strong> With mindful practices, AI can enhance our capabilities without eroding them. This site teaches you how to find that balance.</p>
+                </div>
+            </section>
 
-        <h2>Introduction</h2>
-        <p>
-            This white paper outlines the design, intent, and mechanisms behind the
-            CORVID token, a decentralized protocol inspired by the intelligence
-            and social dynamics of crows.
-        </p>
-
-        <h3>Author & Publication Details</h3>
-        <p>
-            <strong>Author:</strong> John Doe<br>
-            <strong>Date:</strong> 2025<br>
-            <strong>Institution:</strong> Corvid Research Initiative
-        </p>
-
-        <!-- ============================== -->
-        <!-- PDF VIEWER (FIXED + WORKING) -->
-        <!-- ============================== -->
-        <div style="margin-top: 2rem;">
-            <h3>Read the Full White Paper</h3>
-            <p>You can read the PDF below or open it in a new tab.</p>
-
-            <iframe 
-                src="/whitepaper.pdf"
-                style="width:100%; height:80vh; border:none; margin-top:1rem;"
-            ></iframe>
-
-            <p style="text-align:center;">
-                <a href="/whitepaper.pdf" target="_blank" class="btn">Open PDF in New Tab</a>
-            </p>
+            <!-- Quick Start -->
+            <section>
+                <h2>Get Started</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>New to Cognitive Offloading?</h3>
+                        <p>Start with our foundational guide that explains what cognitive offloading is and why it matters.</p>
+                        <a href="#" class="btn" onclick="showPage('learn'); scrollToSection('offloading-101')">Cognitive Offloading 101</a>
+                    </div>
+                    <div class="card">
+                        <h3>Ready for Practical Techniques?</h3>
+                        <p>Explore concrete strategies you can implement today to use AI more responsibly.</p>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('techniques')">View Techniques</a>
+                    </div>
+                    <div class="card">
+                        <h3>Want the Research?</h3>
+                        <p>Read our comprehensive white paper on cognitive offloading and AI assistance.</p>
+                        <a href="#" class="btn btn-outline" onclick="showPage('whitepaper')">Read White Paper</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-</section>
 
-<!-- ====================== -->
-<!-- CONTACT SECTION -->
-<!-- ====================== -->
-<section id="contact" class="section">
-    <div class="section-header">
-        <h1>Contact</h1>
-    </div>
-    <div class="content-box">
-        <p>Email us at: contact@corvid.com</p>
-    </div>
-</section>
+    <!-- LEARN PAGE -->
+    <div id="learn" class="page-content">
+        <div class="hero" style="padding: 4rem 2rem;">
+            <h1>Learn the Fundamentals</h1>
+            <p>Understanding cognitive offloading is the first step to using AI responsibly</p>
+        </div>
 
-</body>
-</html>
+        <div class="container">
+            <!-- Cognitive Offloading 101 -->
+            <section id="offloading-101">
+                <h2>Cognitive Offloading 101</h2>
+                
+                <h3>What Is Cognitive Offloading?</h3>
+                <p>Cognitive offloading is the process of using external resources to reduce the mental effort required for tasks. Instead of relying solely on internal mental processes (like memory or reasoning), we delegate some cognitive work to tools, devices, or other people.</p>
+
+                <div class="content-box">
+                    <h4>Examples from Daily Life:</h4>
+                    <ul>
+                        <li>Writing a shopping list instead of memorizing items</li>
+                        <li>Setting phone reminders rather than remembering appointments</li>
+                        <li>Using GPS navigation instead of learning routes</li>
+                        <li>Asking AI to summarize an article instead of reading it carefully</li>
+                        <li>Having AI generate code instead of working through the logic yourself</li>
+                    </ul>
+                </div>
+
+                <h3>External Memory vs Internal Memory</h3>
+                <p><strong>Internal memory</strong> refers to information stored in your brain—facts you've learned, experiences you remember, skills you've practiced until they became automatic.</p>
+                
+                <p><strong>External memory</strong> refers to information stored outside your brain—notes, bookmarks, databases, cloud storage, and now, AI assistants that can recall and process information on demand.</p>
+
+                <div class="content-box success-box">
+                    <h4>The Balance:</h4>
+                    <p>Both types of memory are valuable. The key is knowing when to use each. Over-relying on external memory can prevent information from ever entering your long-term internal memory, weakening your ability to think independently and make connections.</p>
+                </div>
+
+                <h3>Emerging Research Trends</h3>
+                <p>Recent studies in cognitive science and human-computer interaction reveal important patterns:</p>
+                <ul>
+                    <li><strong>The Google Effect:</strong> People remember less information when they know it's easily accessible online</li>
+                    <li><strong>Skill Atrophy:</strong> Regular use of calculators, autocorrect, and GPS can reduce mathematical, spelling, and navigation skills</li>
+                    <li><strong>Metacognitive Awareness:</strong> Many people are unaware of how much they've come to depend on external tools</li>
+                    <li><strong>AI-Specific Concerns:</strong> Unlike static tools, AI can generate novel content, making over-reliance particularly concerning for creative and analytical work</li>
+                </ul>
+
+                <div class="content-box">
+                    <p><strong>Bottom Line:</strong> Cognitive offloading isn't inherently good or bad—it depends on what you offload, how often, and whether you're maintaining the underlying skills.</p>
+                    <a href="#" class="btn" onclick="showPage('learn'); scrollToSection('responsible-ai')">Next: Responsible AI Use →</a>
+                </div>
+            </section>
+
+            <!-- Responsible AI Use -->
+            <section id="responsible-ai">
+                <h2>Responsible AI Use</h2>
+
+                <h3>Offloading Categories</h3>
+                <p>Not all tasks are equal when it comes to offloading. Understanding the difference helps you decide what to delegate.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Routine Tasks (Generally Safe to Offload)</h4>
+                        <ul>
+                            <li>Scheduling and calendar management</li>
+                            <li>Data formatting and organization</li>
+                            <li>Spell-checking and grammar correction</li>
+                            <li>Finding factual information</li>
+                            <li>Transcription and translation</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Reasoning Tasks (Offload with Caution)</h4>
+                        <ul>
+                            <li>Problem-solving and analysis</li>
+                            <li>Creative writing and ideation</li>
+                            <li>Learning new concepts</li>
+                            <li>Making decisions</li>
+                            <li>Critical thinking exercises</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>"When to Offload" Framework</h3>
+                <div class="flowchart">
+                    <div class="flow-step">
+                        <strong>Step 1: Identify the Task Type</strong>
+                        <p>Is this a routine task or does it require reasoning/learning?</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Step 2: Consider the Skill</strong>
+                        <p>Is this a skill you want to maintain or develop?</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Step 3: Assess Frequency</strong>
+                        <p>How often do you use AI for similar tasks?</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Step 4: Make an Informed Choice</strong>
+                        <p>If it's routine, low-skill, and you use AI sparingly: Offload freely.<br>
+                        If it's reasoning-based, important skill, or frequent use: Do it yourself or use AI as a collaborator, not a replacement.</p>
+                    </div>
+                </div>
+
+                <h3>Signs of Over-Offloading</h3>
+                <div class="content-box warning-box">
+                    <h4>Self-Check: Are You Over-Relying on AI?</h4>
+                    <ul class="checklist">
+                        <li>You reach for AI immediately without attempting tasks yourself</li>
+                        <li>You feel anxious or lost when AI isn't available</li>
+                        <li>You've noticed skills declining (writing, math, problem-solving)</li>
+                        <li>You accept AI outputs without critically evaluating them</li>
+                        <li>You struggle to start tasks without AI assistance</li>
+                        <li>You use AI for learning tasks rather than testing yourself</li>
+                    </ul>
+                    <p><strong>If you checked 3 or more:</strong> It's time to reassess your AI habits and implement stronger boundaries.</p>
+                </div>
+
+                <div class="content-box">
+                    <a href="#" class="btn" onclick="showPage('learn'); scrollToSection('risks-benefits')">Next: Understand Risks & Benefits →</a>
+                </div>
+            </section>
+
+            <!-- Risks & Benefits -->
+            <section id="risks-benefits">
+                <h2>Risks & Benefits</h2>
+
+                <h3>Benefits of AI-Assisted Cognition</h3>
+                <p>When used responsibly, AI can genuinely enhance your capabilities:</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Productivity Gains</h4>
+                        <p>Automate repetitive tasks and free up time for higher-value work that requires human judgment and creativity.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Learning Acceleration</h4>
+                        <p>Get instant explanations, examples, and feedback that would take hours to research independently.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Idea Generation</h4>
+                        <p>Use AI as a brainstorming partner to explore possibilities you might not have considered.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Accessibility</h4>
+                        <p>Level the playing field for people with different abilities, backgrounds, or access to resources.</p>
+                    </div>
+                </div>
+
+                <h3>Documented Risk Pathways</h3>
+                <p>Research has identified several ways that over-offloading can harm cognitive function:</p>
+
+                <div class="content-box warning-box">
+                    <h4>1. Memory Degradation</h4>
+                    <p><strong>The Mechanism:</strong> When you externalize information without first encoding it internally, it never enters long-term memory. Repeated over time, this prevents knowledge accumulation.</p>
+                    <p><strong>Example:</strong> Always asking AI to recall information instead of trying to remember it yourself.</p>
+                </div>
+
+                <div class="content-box warning-box">
+                    <h4>2. Reasoning Skill Atrophy</h4>
+                    <p><strong>The Mechanism:</strong> Problem-solving is a skill that requires practice. If AI solves problems for you, those neural pathways weaken from disuse.</p>
+                    <p><strong>Example:</strong> Having AI debug all your code without attempting to understand the errors yourself.</p>
+                </div>
+
+                <div class="content-box warning-box">
+                    <h4>3. Reduced Self-Regulation</h4>
+                    <p><strong>The Mechanism:</strong> Cognitive effort builds self-discipline and tolerance for difficulty. Constantly taking the easy path (AI) weakens these mental muscles.</p>
+                    <p><strong>Example:</strong> Always using AI when a task feels challenging, never pushing through difficulty.</p>
+                </div>
+
+                <div class="content-box warning-box">
+                    <h4>4. Attention & Focus Problems</h4>
+                    <p><strong>The Mechanism:</strong> The habit of immediately seeking external assistance reduces your ability to sustain attention on difficult problems.</p>
+                    <p><strong>Example:</strong> Switching to AI the moment you encounter confusion while reading or learning.</p>
+                </div>
+
+                <h3>Healthy Limits & Boundaries</h3>
+                <p>The solution isn't to avoid AI entirely—it's to establish boundaries that preserve cognitive health:</p>
+                
+                <ul class="checklist">
+                    <li><strong>Try first, offload second:</strong> Attempt tasks yourself before asking AI</li>
+                    <li><strong>Time-box AI use:</strong> Set specific periods when AI is off-limits</li>
+                    <li><strong>Practice retrieval:</strong> Regularly test yourself on information instead of immediately looking it up</li>
+                    <li><strong>Maintain core skills:</strong> Identify skills critical to your work/life and protect them from offloading</li>
+                    <li><strong>Review AI outputs critically:</strong> Don't accept AI content without evaluation</li>
+                    <li><strong>Alternate between modes:</strong> Sometimes use AI, sometimes don't, to maintain both capabilities</li>
+                </ul>
+
+                <div class="content-box success-box">
+                    <h4>The Goal:</h4>
+                    <p>To use AI as a tool that enhances your abilities without becoming dependent on it. Think of AI as cognitive scaffolding—helpful during construction, but not a permanent replacement for the structure itself.</p>
+                </div>
+
+                <div class="content-box">
+                    <a href="#" class="btn" onclick="showPage('techniques')">Ready for Practical Techniques? →</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- WHITE PAPER PAGE -->
+    <div id="whitepaper" class="page-content">
+        <div class="hero" style="padding: 4rem 2rem;">
+            <h1>White Paper</h1>
+            <p>Comprehensive research on cognitive offloading and AI assistance</p>
+        </div>
+
+        <div class="container">
+            <div class="whitepaper-container">
+                <h2>Cognitive Offloading in the Age of AI Dependency: A Framework for Human-AI Cognitive Balance</h2>
+                
+                <div class="content-box" style="background: var(--light); border-left: 4px solid var(--accent);">
+                    <p><strong>Author:</strong> Mahir Pepic<br>
+                    <strong>Institution:</strong
