@@ -32,7 +32,6 @@
             background: var(--light);
         }
 
-        /* Navigation */
         nav {
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -60,11 +59,6 @@
             gap: 0.5rem;
         }
 
-        .logo-icon {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        
         .crow-icon {
             width: 32px;
             height: 32px;
@@ -88,7 +82,6 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -114,14 +107,12 @@
             opacity: 0.9;
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
-        /* Sections */
         section {
             margin-bottom: 4rem;
         }
@@ -150,7 +141,6 @@
             font-size: 1.1rem;
         }
 
-        /* Cards */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,7 +170,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
@@ -226,7 +215,6 @@
             flex-wrap: wrap;
         }
 
-        /* Lists */
         ul, ol {
             margin-left: 2rem;
             margin-bottom: 1.5rem;
@@ -238,7 +226,6 @@
             font-size: 1.1rem;
         }
 
-        /* Content boxes */
         .content-box {
             background: white;
             border-left: 4px solid var(--primary);
@@ -258,7 +245,6 @@
             background: #f0fdf4;
         }
 
-        /* Checklist */
         .checklist {
             list-style: none;
             margin-left: 0;
@@ -278,7 +264,6 @@
             font-size: 1.3rem;
         }
 
-        /* Flowchart */
         .flowchart {
             background: white;
             padding: 2rem;
@@ -302,7 +287,6 @@
             margin: 0.5rem 0;
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
@@ -338,7 +322,6 @@
             color: white;
         }
 
-        /* Page content area */
         .page-content {
             display: none;
         }
@@ -347,7 +330,6 @@
             display: block;
         }
 
-        /* White paper section */
         .whitepaper-container {
             background: white;
             padding: 3rem;
@@ -355,16 +337,6 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.07);
         }
 
-        .pdf-placeholder {
-            background: var(--light);
-            border: 2px dashed var(--border);
-            padding: 4rem;
-            text-align: center;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -384,27 +356,12 @@
             }
         }
 
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Placeholder for future content */
-        .coming-soon {
-            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .coming-soon h3 {
-            color: var(--accent);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo" onclick="showPage('home')">
@@ -424,9 +381,7 @@
         </div>
     </nav>
 
-    <!-- HOME PAGE -->
     <div id="home" class="page-content active">
-        <!-- Hero Section -->
         <div class="hero">
             <h1>Learn to Use AI Without Losing Your Edge</h1>
             <p class="hero-subtitle">Master responsible cognitive offloading + mental wellness foundations</p>
@@ -436,9 +391,7 @@
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="container">
-            <!-- Why Corvid -->
             <section>
                 <h2>Why "Corvid"?</h2>
                 <div class="content-box" style="background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); border-left: 4px solid var(--accent);">
@@ -456,7 +409,6 @@
                 </div>
             </section>
 
-            <!-- Three Pillars -->
             <section>
                 <h2>What This Site Teaches</h2>
                 <div class="card-grid">
@@ -478,7 +430,6 @@
                 </div>
             </section>
 
-            <!-- Why This Matters -->
             <section>
                 <h2>Why This Matters</h2>
                 <div class="content-box">
@@ -496,7 +447,6 @@
                 </div>
             </section>
 
-            <!-- Quick Start -->
             <section>
                 <h2>Get Started</h2>
                 <div class="card-grid">
@@ -520,7 +470,6 @@
         </div>
     </div>
 
-    <!-- LEARN PAGE -->
     <div id="learn" class="page-content">
         <div class="hero" style="padding: 4rem 2rem;">
             <h1>Learn the Fundamentals</h1>
@@ -528,7 +477,6 @@
         </div>
 
         <div class="container">
-            <!-- Cognitive Offloading 101 -->
             <section id="offloading-101">
                 <h2>Cognitive Offloading 101</h2>
                 
@@ -571,7 +519,6 @@
                 </div>
             </section>
 
-            <!-- Responsible AI Use -->
             <section id="responsible-ai">
                 <h2>Responsible AI Use</h2>
 
@@ -644,7 +591,6 @@
                 </div>
             </section>
 
-            <!-- Risks & Benefits -->
             <section id="risks-benefits">
                 <h2>Risks & Benefits</h2>
 
@@ -720,7 +666,6 @@
         </div>
     </div>
 
-    <!-- WHITE PAPER PAGE -->
     <div id="whitepaper" class="page-content">
         <div class="hero" style="padding: 4rem 2rem;">
             <h1>White Paper</h1>
@@ -733,4 +678,449 @@
                 
                 <div class="content-box" style="background: var(--light); border-left: 4px solid var(--accent);">
                     <p><strong>Author:</strong> Mahir Pepic<br>
-                    <strong>Institution:</strong
+                    <strong>Institution:</strong> University of Silicon Valley<br>
+                    <strong>Program:</strong> Masters of Business Innovation<br>
+                    <strong>Date:</strong> October 23, 2025</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Introduction</h3>
+                    <p>It feels like everywhere we look nowadays, artificial intelligence is rearing its head. What started off as playfully asking the AI models to do amusing, simple tasks for us has transformed into entire jobs being done by artificial intelligence. Nowadays, there are a plethora of benefits that come with using AI models. Whether it is writing a work email, analyzing data, or brainstorming–AI systems can handle tasks once managed entirely by human cognition. The benefits are clear, but the risk is a bit more hidden: <strong>cognitive offloading</strong>.</p>
+                    
+                    <p>Cognitive offloading refers to the automation of mental tasks to external sources, such as AI. Without moderation, excessive cognitive offloading could diminish independent problem-solving, critical thinking, and memory retention skills. As society grows increasingly dependent on AI, we are faced with a new dilemma: how to maintain technological advancement and innovation without sacrificing our brain. This white paper explores that tug-of-war while introducing the Cognitive Load Balance Framework as an approach for preserving human cognition in a world only increasing in intelligence of the artificial variety.</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Problem: AI-Induced Cognitive Offloading</h3>
+                    <p>Humanity's interaction with information forever changed when general use AI-Models came into the mainstream. According to Risko and Gilbert (2016), offloading happens whenever humans delegate a task they could have done themselves to tools or technology. AI is not new in this regard. The calculator was an earlier example of a cognitive offloading tool. The Internet search engines are another example. These tools obviously advance our workflows but one hardly ponders the consequences of such convenience.</p>
+                    
+                    <p>Metacognitive engagement, defined by researchers as the mental monitoring of one's own understanding, can be eroded through usage of such tools (Fügener et al., 2022). Chronic reliance on AI assistance can breed epistemic complacency, where users become drones that accept outputs as law without critical verification first (Bender et al., 2021).</p>
+                    
+                    <p>Empirical research shows support for these concerns. Barr and associates (2015) found that individuals who habitually "Google" information exhibited lower recall of facts and reduced conceptual integration. Similarly, Marsh and Rajaram (2019) observed a decline in collaborative reasoning when participants deferred to automated responses.</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Psychological and Societal Impacts</h3>
+                    <p>Memory and learning degradation are certainly a concern. The less effort the brain has to expend, the less opportunities the brain has to encode and consolidate new information. This in turn could weaken transfer learning, which is the ability to apply knowledge across contexts.</p>
+                    
+                    <p>The invention of the calculator, for instance, made arithmetic much easier but also reduced basic math calculation skills. Researchers found that students who regularly relied on calculators were more likely to have weaker math and estimation skills (Hembree & Dessart, 1992). This did not prove intellectually catastrophic, but the advent of the internet brought more offloading.</p>
+                    
+                    <p>In their 2011 study, Sparrow, Liu, and Wegner coined the <strong>"Google Effect"</strong>: people are less likely to remember the information itself and more likely to remember where to find it with the memory externalization the internet provides. This could be seen as a shift from internal recall to external retrieval. That being said, the internet has been around for decades and we haven't all become forgetful piles of mush yet. Technologies such as Google simply restructured what remembering meant.</p>
+                    
+                    <p>However, generative AI reaches unprecedented levels of offloading. Whereas the internet replaced storage, AI models are replacing thought processes like synthesis and creativity. Fawns (2023) notes that students who use AI writing assistants display solid syntax but shallow conceptual understanding.</p>
+                    
+                    <p>Metacognitive erosion, which Fügener et al. (2022) describe as the cessation in mental monitoring of one's reasoning quality, poses a risk for our future generations' sense of judgement. The implications from this could put those affected at increased risk for propaganda. The Organization for Economic Cooperation and Development (2023) has already warned that gaps in AI literacy could also exacerbate existing educational and economic divides. There seems to be some concern that not all communities are coming into the AI era on equal footing, and there could be cascading consequences for this.</p>
+                </div>
+
+                <div class="content-box" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%); border-left: 4px solid var(--primary);">
+                    <h3>The Cognitive Load Balance Framework (CLBF)</h3>
+                    <p>The cognitive load balance framework proposes a system for positioning human thought and AI assistance together without competing interest. Three main pillars of this framework are cognitive retention, reflective intermediation, and ethical alignment.</p>
+                    
+                    <h4>Cognitive Retention</h4>
+                    <p>Cognitive retention involves deliberate rehearsal of recall and rationale before consultation of AI software. It could be as simple as a student at least attempting to solve a problem with their own brain before plugging the problem into an AI model.</p>
+                    
+                    <h4>Reflective Intermediation</h4>
+                    <p>Reflective intermediation requires reflection after AI use. A checklist could be developed to evaluate whether the AI's output aligns with logic, context, bias, and more.</p>
+                    
+                    <h4>Ethical Alignment</h4>
+                    <p>Ethical alignment frames AI collaboration around epistemic responsibility (Floridi, 2021). The idea is to give the human, not the AI model, ultimate creative ownership and authority.</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Benefits of Balanced Cognitive Offloading</h3>
+                    <p>Enhanced adaptability, trust calibration, and long-term productivity are some benefits of responsible cognitive offloading. Humans who engage with AI in a more collaborative role rather than as a crutch may be able to maintain flexibility in new situations—a trait that is still essential for leadership responses during crisis and innovation.</p>
+                    
+                    <p>Following the Cognitive Load Balance Framework guidelines would allow one to use AI in a balanced sense where calibrated trust is fostered by knowing when to question AI as opposed to just developing blind dependence. Long-term productivity is kept intact simply by maintaining or building upon your skills instead of completely offloading them to AI and letting them atrophy.</p>
+                    
+                    <p>Academic institutions could operationalize the Cognitive Load Balance Framework through AI literacy curriculum that emphasizes verification and reflection. One idea could be to even introduce an educational AI in classrooms that intentionally gives incorrect answers a percentage of the time to encourage students to be sharper. There could also be audits that measure the efficacy of educational tools and how they affect student reasoning effort. There could even be metrics to track cognitive sustainability. Perhaps policy could pave the way for professional development programs that teach employees how to integrate AI while maintaining intellectual autonomy.</p>
+                </div>
+
+                <div class="content-box success-box">
+                    <h3>Call to Action</h3>
+                    <p>I love the flexibility and acceleration artificial intelligence provides to my life. It would be foolish to decry AI as holistically evil, and I do not believe AI integration is inherently harmful. However, left unmanaged, it can bankrupt the very faculties it seeks to enrich. To protect our human cognition in an increasingly AI world, organizations, educators, and policymakers should:</p>
+                    
+                    <ol style="margin-left: 2rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.75rem;"><strong>Redefine AI Literacy</strong> to include cognitive mindfulness</li>
+                        <li style="margin-bottom: 0.75rem;"><strong>Adopt the Cognitive Load Balance Framework</strong> as a standard response to AI integration</li>
+                        <li style="margin-bottom: 0.75rem;"><strong>Support research and policy</strong> that track cognitive outcomes, not just productivity and profit</li>
+                    </ol>
+                    
+                    <p style="margin-top: 1.5rem;">Protecting human cognition is a must, not an option. As our world advances more, we will be faced with a choice to preserve our humanity or give in to pure productivity metrics. The future of intelligence hinges on our ability to think with machines, not letting them do the thinking for us.</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>References</h3>
+                    <div style="font-size: 0.95rem; line-height: 1.8;">
+                        <p>Barr, N., Pennycook, G., Stolz, J. A., & Fugelsang, J. A. (2015). The brain in your pocket: Evidence that smartphones are used to supplant thinking. <em>Computers in Human Behavior, 48</em>, 473–480.</p>
+                        
+                        <p>Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em> (pp. 610–623).</p>
+                        
+                        <p>Clark, A., & Chalmers, D. (1998). The extended mind. <em>Analysis, 58</em>(1), 7–19.</p>
+                        
+                        <p>Fawns, T. (2023). Generative AI and the education of attention. <em>Postdigital Science and Education</em>.</p>
+                        
+                        <p>Floridi, L. (2021). <em>The ethics of artificial intelligence</em>. Oxford University Press.</p>
+                        
+                        <p>Fügener, A., Grahl, J., Gupta, A., & Ketter, W. (2022). Cognitive offloading and metacognitive neglect in algorithmic decision-making. <em>Management Science, 68</em>(1), 133–151.</p>
+                        
+                        <p>Hembree, R., & Dessart, D. J. (1992). Research on calculators in mathematics education. In J. T. Fey (Ed.), <em>Calculators in mathematics education</em> (pp. 22–31). National Council of Teachers of Mathematics.</p>
+                        
+                        <p>Marsh, E. J., & Rajaram, S. (2019). The digital expansion of the mind: Implications of internet usage for memory and cognition. <em>Journal of Applied Research in Memory and Cognition, 8</em>(1), 1–14.</p>
+                        
+                        <p>Organisation for Economic Co-operation and Development. (2023). <em>AI and the future of skills, volume 1: Capabilities and assessments</em>. OECD Publishing.</p>
+                        
+                        <p>Risko, E. F., & Gilbert, S. J. (2016). Cognitive offloading. <em>Trends in Cognitive Sciences, 20</em>(9), 676–688.</p>
+                        
+                        <p>Sparrow, B., Liu, J., & Wegner, D. M. (2011). Google effects on memory: Cognitive consequences of having information at our fingertips. <em>Science, 333</em>(6043), 776–778.</p>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <h3>Download & Citation</h3>
+                    <p><strong>Download:</strong> <a href="./whitepaper.pdf" download="Cognitive_Offloading_Whitepaper_Corvid.pdf" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Download Full White Paper (PDF)</a></p>
+                    
+                    <h4>Citation (APA Format):</h4>
+                    <p style="background: var(--light); padding: 1rem; border-radius: 4px; font-family: monospace; font-size: 0.95rem;">
+                        Pepic, M. (2025). <em>Cognitive offloading in the age of AI dependency: A framework for human-AI cognitive balance</em>. University of Silicon Valley. Retrieved from Corvid Initiative.
+                    </p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Related Concepts</h3>
+                    <p>Explore these topics to deepen your understanding:</p>
+                    <ul>
+                        <li><a href="#" onclick="showPage('learn'); scrollToSection('offloading-101')" style="color: var(--primary);">Cognitive Offloading 101</a></li>
+                        <li><a href="#" onclick="showPage('learn'); scrollToSection('responsible-ai')" style="color: var(--primary);">Responsible AI Use Framework</a></li>
+                        <li><a href="#" onclick="showPage('techniques'); scrollToSection('memory-workflows')" style="color: var(--primary);">Memory-Safe Workflows</a></li>
+                        <li><a href="#" onclick="showPage('resources')" style="color: var(--primary);">Research References & Further Reading</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="techniques" class="page-content">
+        <div class="hero" style="padding: 4rem 2rem;">
+            <h1>Practical Techniques</h1>
+            <p>Concrete strategies for responsible AI use</p>
+        </div>
+
+        <div class="container">
+            <section id="offloading-strategies">
+                <h2>Offloading Strategies</h2>
+
+                <h3>Tasks Ideal for AI Offloading</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Data Processing</h4>
+                        <ul>
+                            <li>Formatting and cleaning datasets</li>
+                            <li>Converting file formats</li>
+                            <li>Organizing information</li>
+                            <li>Extracting structured data</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Routine Communication</h4>
+                        <ul>
+                            <li>Email templates and responses</li>
+                            <li>Meeting summaries</li>
+                            <li>Status updates</li>
+                            <li>Calendar coordination</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Research Assistance</h4>
+                        <ul>
+                            <li>Finding relevant sources</li>
+                            <li>Summarizing long documents</li>
+                            <li>Translating content</li>
+                            <li>Generating search queries</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Code Scaffolding</h4>
+                        <ul>
+                            <li>Boilerplate code generation</li>
+                            <li>Syntax conversion</li>
+                            <li>Documentation writing</li>
+                            <li>Test case generation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Tasks NOT Ideal for Offloading</h3>
+                <div class="content-box warning-box">
+                    <p>These tasks build critical cognitive skills and should be done yourself, especially when learning or developing expertise:</p>
+                    <ul>
+                        <li><strong>Deep Learning:</strong> Understanding new concepts, working through proofs, solving practice problems</li>
+                        <li><strong>Creative Thinking:</strong> Original ideation, strategic planning, artistic expression</li>
+                        <li><strong>Critical Analysis:</strong> Evaluating arguments, identifying assumptions, judging quality</li>
+                        <li><strong>Complex Problem-Solving:</strong> Debugging difficult issues, designing solutions, making tradeoffs</li>
+                        <li><strong>Skill Development:</strong> Practicing new abilities, building automaticity, developing intuition</li>
+                        <li><strong>Important Decisions:</strong> Career choices, ethical judgments, strategic direction</li>
+                    </ul>
+                </div>
+
+                <h3>Decision Flowchart: "Should I Use AI for This?"</h3>
+                <div class="flowchart">
+                    <div class="flow-step" style="background: #dbeafe;">
+                        <strong>START: You're about to use AI for a task</strong>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Question 1: Have you tried it yourself first?</strong>
+                        <p>YES → Continue to Question 2<br>NO → Try it yourself for 5-10 minutes first</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Question 2: Is this task building a skill you want to maintain?</strong>
+                        <p>YES → Do it yourself or use AI only as a guide<br>NO → Continue to Question 3</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Question 3: Is this routine/repetitive or novel/complex?</strong>
+                        <p>ROUTINE → Safe to offload<br>NOVEL/COMPLEX → Work through it yourself, use AI to check</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                        <strong>Question 4: How often have you used AI for similar tasks recently?</strong>
+                        <p>RARELY → Offload if you want<br>FREQUENTLY → Take a break, do this one yourself</p>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step" style="background: #d1fae5;">
+                        <strong>Decision Made: Use AI responsibly</strong>
+                        <p>Remember to critically evaluate any output</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="self-regulation">
+                <h2>Self-Regulation Practices</h2>
+
+                <h3>Delay-Timers Before Asking AI</h3>
+                <div class="content-box success-box">
+                    <p><strong>The Strategy:</strong> Institute a mandatory waiting period before using AI for non-urgent tasks.</p>
+                    
+                    <h4>How to Implement:</h4>
+                    <ul class="checklist">
+                        <li><strong>5-Minute Rule:</strong> For simple questions, try figuring it out for 5 minutes first</li>
+                        <li><strong>20-Minute Rule:</strong> For learning tasks, work independently for 20 minutes before seeking help</li>
+                        <li><strong>End-of-Day Rule:</strong> For writing/creative tasks, complete a draft without AI, then use it for revision</li>
+                        <li><strong>Pomodoro Integration:</strong> No AI during focused work blocks, only during breaks</li>
+                    </ul>
+
+                    <p><strong>Why It Works:</strong> The delay forces your brain to engage with the problem, preventing the habit of immediate offloading and preserving your problem-solving muscles.</p>
+                </div>
+
+                <h3>Cognitive Friction Strategies</h3>
+                <p>Intentionally add small barriers to make AI use less automatic:</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Physical Barriers</h4>
+                        <ul>
+                            <li>Close AI tabs when doing focused work</li>
+                            <li>Use AI on a different device</li>
+                            <li>Disable AI browser extensions during deep work</li>
+                            <li>Create a separate workspace for AI-free tasks</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Mental Barriers</h4>
+                        <ul>
+                            <li>Ask yourself "Do I really need AI for this?"</li>
+                            <li>Write down your own attempt before asking AI</li>
+                            <li>Set daily AI usage quotas</li>
+                            <li>Track your AI use to build awareness</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>How to Maintain Agency While Using AI</h3>
+                <div class="content-box">
+                    <p><strong>The Challenge:</strong> AI can subtly shift you from active creator to passive consumer.</p>
+                    
+                    <p><strong>Maintain Agency By:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Set the direction:</strong> Define your goals before asking AI</li>
+                        <li><strong>Provide constraints:</strong> Tell AI what NOT to do, not just what to do</li>
+                        <li><strong>Iterate actively:</strong> Modify AI outputs substantially rather than accepting them as-is</li>
+                        <li><strong>Make final decisions:</strong> Treat AI suggestions as input, not answers</li>
+                        <li><strong>Maintain ownership:</strong> Ensure you understand and can defend any AI-assisted work</li>
+                        <li><strong>Practice veto power:</strong> Regularly reject AI suggestions to reinforce your authority</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="memory-workflows">
+                <h2>Memory-Safe Workflows</h2>
+
+                <h3>Techniques to Retain Long-Term Knowledge</h3>
+                
+                <div class="content-box success-box">
+                    <h4>1. Active Recall Before AI Lookup</h4>
+                    <p>Before asking AI for information, try to recall what you already know:</p>
+                    <ul>
+                        <li>Write down everything you remember about the topic</li>
+                        <li>Identify specific gaps in your knowledge</li>
+                        <li>Only then use AI to fill those gaps</li>
+                        <li>After AI provides info, close it and summarize in your own words</li>
+                    </ul>
+                </div>
+
+                <div class="content-box success-box">
+                    <h4>2. The "Teach-Back" Method</h4>
+                    <p>After AI explains something:</p>
+                    <ul>
+                        <li>Close the AI conversation</li>
+                        <li>Explain the concept to yourself (or someone else) from memory</li>
+                        <li>Note what you couldn't explain clearly</li>
+                        <li>Review those specific points</li>
+                    </ul>
+                    <p><strong>Why it works:</strong> Teaching requires deeper processing than passive consumption</p>
+                </div>
+
+                <div class="content-box success-box">
+                    <h4>3. The "Shadow Practice" Method</h4>
+                    <p><strong>Core Principle:</strong> After AI helps you, immediately do a similar task yourself without assistance.</p>
+                    
+                    <h4>How It Works:</h4>
+                    <ol>
+                        <li><strong>AI-Assisted Task:</strong> Use AI to complete a task or solve a problem</li>
+                        <li><strong>Study the Process:</strong> Don't just copy the output—understand HOW it was done</li>
+                        <li><strong>Shadow Task:</strong> Immediately tackle a similar problem on your own</li>
+                        <li><strong>Compare:</strong> Check your work against the AI approach, note differences</li>
+                        <li><strong>Iterate:</strong> If you struggled, do another shadow task</li>
+                    </ol>
+
+                    <h4>Examples:</h4>
+                    <p><strong>Coding:</strong> AI debugs your code → You debug a similar issue in another part of the project</p>
+                    <p><strong>Writing:</strong> AI writes a product description → You write a description for a different product</p>
+                    <p><strong>Analysis:</strong> AI analyzes one dataset → You analyze a comparable dataset yourself</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="resources" class="page-content">
+        <div class="hero" style="padding: 4rem 2rem;">
+            <h1>Resources</h1>
+            <p>Additional materials for deeper understanding</p>
+        </div>
+
+        <div class="container">
+            <section>
+                <h2>Terminology</h2>
+                <div class="content-box">
+                    <p><strong>Cognitive Offloading:</strong> The use of external resources to reduce internal cognitive demands</p>
+                    <p><strong>External Memory:</strong> Information storage outside the human brain (notes, devices, AI)</p>
+                    <p><strong>Internal Memory:</strong> Information encoded and stored in biological neural networks</p>
+                    <p><strong>Metacognition:</strong> Awareness and understanding of one's own thought processes</p>
+                    <p><strong>Retrieval Practice:</strong> The act of recalling information from memory to strengthen retention</p>
+                    <p><strong>Cognitive Load:</strong> The total mental effort being used in working memory</p>
+                    <p><strong>Skill Atrophy:</strong> The degradation of abilities through lack of use</p>
+                    <p><strong>Self-Regulation:</strong> The ability to manage one's thoughts, emotions, and behaviors toward goals</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Research References</h2>
+                <div class="content-box">
+                    <h4>Key Studies:</h4>
+                    <ul>
+                        <li>Sparrow, B., Liu, J., & Wegner, D. M. (2011). Google Effects on Memory: Cognitive Consequences of Having Information at Our Fingertips. <em>Science, 333</em>(6043), 776-778.</li>
+                        <li>Risko, E. F., & Gilbert, S. J. (2016). Cognitive Offloading. <em>Trends in Cognitive Sciences, 20</em>(9), 676-688.</li>
+                        <li>Storm, B. C., Stone, S. M., & Benjamin, A. S. (2017). Using the Internet to Access Information Inflates Future Use of the Internet to Access Other Information. <em>Memory, 25</em>(6), 717-723.</li>
+                        <li>Ward, A. F. (2013). Supernormal: How the Internet Is Changing Our Memories and Our Minds. <em>Psychological Inquiry, 24</em>(4), 341-348.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="about" class="page-content">
+        <div class="hero" style="padding: 4rem 2rem;">
+            <h1>About This Project</h1>
+            <p>Understanding the mission behind cognitive wellness education</p>
+        </div>
+
+        <div class="container">
+            <section>
+                <h2>Our Purpose</h2>
+                <div class="content-box">
+                    <p>This site exists to address a critical challenge of our time: how to benefit from AI assistance without sacrificing the cognitive capabilities that make us creative, adaptable, and independent thinkers.</p>
+                    
+                    <p>As AI becomes more powerful and accessible, the risk of over-reliance grows. We're not against AI—we're for thoughtful, intentional use that enhances human potential rather than diminishing it.</p>
+                    
+                    <p>Our goal is to provide evidence-based guidance that helps people navigate this new landscape with awareness, agency, and cognitive integrity.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Statement on Responsible AI Practices</h2>
+                <div class="content-box success-box">
+                    <p>We believe that:</p>
+                    <ul class="checklist">
+                        <li>AI should augment human capabilities, not replace human thinking</li>
+                        <li>Users have a right to understand the cognitive impacts of the tools they use</li>
+                        <li>Education and awareness are essential for healthy AI adoption</li>
+                        <li>Individual agency and choice must be preserved in human-AI systems</li>
+                        <li>Long-term cognitive health matters as much as short-term productivity</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Learn</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('learn'); scrollToSection('offloading-101')">Cognitive Offloading 101</a></li>
+                    <li><a href="#" onclick="showPage('learn'); scrollToSection('responsible-ai')">Responsible AI Use</a></li>
+                    <li><a href="#" onclick="showPage('learn'); scrollToSection('risks-benefits')">Risks & Benefits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Techniques</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('techniques'); scrollToSection('offloading-strategies')">Offloading Strategies</a></li>
+                    <li><a href="#" onclick="showPage('techniques'); scrollToSection('self-regulation')">Self-Regulation</a></li>
+                    <li><a href="#" onclick="showPage('techniques'); scrollToSection('memory-workflows')">Memory-Safe Workflows</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('whitepaper')">White Paper</a></li>
+                    <li><a href="#" onclick="showPage('resources')">Research & Reading</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
+            <p>© 2025 Corvid | Promoting responsible AI use for cognitive health</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(sectionId) {
+            setTimeout(() => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
